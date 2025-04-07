@@ -3,6 +3,7 @@ import fitz  # PyMuPDF
 import docx
 import spacy
 import re
+showGitHubButton = false
 
 nlp = spacy.load("en_core_web_sm")
 
