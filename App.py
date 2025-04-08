@@ -28,10 +28,10 @@ def extract_info(text):
         if ent.label_ == "PERSON":
             name = ent.text
             break
-    email = re.findall(r"r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+    email = re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
 ", text)
-    phone = re.findall(r"r"\+?\d{1,4}?[-.\s]?\(?\d{2,5}\)?[-.\s]?\d{3,5}[-.\s]?\d{4}"
-", text)
+    phone = re.findall(r"\+?\d{1,4}?[-.\s]?\(?\d{2,5}\)?[-.\s]?\d{3,5}[-.\s]?\d{4}"
+, text)
     return {
         "Name": name,
         "Email": email[0] if email else "Not found",
